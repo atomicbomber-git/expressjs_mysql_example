@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Home Page </title>
+	</head>
+	<body>
+		<h1> Hello </h1>
+
+		
+
+		<table>
+			<thead>
+				<tr>
+					<th> Name </th>
+					<th> Brand </th>
+					<th> Type </th>
+					<th> Description </th>
+					<th> Price </th>
+					<th> Image </th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for product in products %}
+					<tr>
+						<td> {{ product.get("name") }} </td>
+						<td> {{ product.get("brand") }} </td>
+						<td> {{ product.get("type") }} </td>
+						<td> {{ product.get("description") }} </td>
+						<td> {{ product.get("price") }} </td>
+						<td> {{ product.get("image") }} </td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+	</body>
+</html>
